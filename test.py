@@ -8,7 +8,9 @@ qr = qrcode.QRCode(
     border=3
 )
 
-qr.add_data('Merci d\'avoir scanné mon QRcode')
+data_qrcode = input('Entrez le lien ou le texte que vous souhaiter afficher dans votre QRcode : ')
+
+qr.add_data(data_qrcode)
 qr.make(fit=True)
 
 img = qr.make_image(fill_color="black", back_color="white")
